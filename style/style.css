@@ -1,0 +1,15 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.card {
+    background-color: aquamarine;
+    width: 100%;
+    aspect-ratio: 3/4;
+}
+
+/*  */
