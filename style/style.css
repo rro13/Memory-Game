@@ -1,15 +1,57 @@
-.cards {
+body header h1 {
+    margin: 20px;
+    text-align: center;
+}
+
+#cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     gap: 20px;
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
 }
 
 .card {
-    background-color: aquamarine;
-    width: 100%;
     aspect-ratio: 3/4;
+    width: 100%;
+    position: relative;
+    background-color: gray;
+    transition: transform 0.8s;
+	transform-style: preserve-3d;
+    border-radius: 5px;
+    border: solid 1px;
 }
 
-/*  */
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+    border-radius: 5px;
+    border: solid 1px;
+    background-repeat: no-repeat;
+}
+
+.front {
+    transform: rotateY(180deg);
+    background-size: 110%;
+}
+
+.back {
+    background-image: url(/imagens/pokebola.png);
+    background-color: rgb(226, 224, 224);
+    background-size: 95%;
+    backface-visibility: hidden;
+}
+
+.revealed-card {
+    transform: rotateY(180deg);
+}
+
+.correct-pair {
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+
+  
