@@ -9,23 +9,39 @@
     box-sizing: border-box;
 }
 
-body {
+
+
+body::before {
     background-image: url(/imagens/grass.jpg);
+    display: block;
+    content: ' ';
     background-size: cover;
     background-position: center;
+    opacity: 70%;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
 }
 
 header {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: center;
     font-size: 2rem;
-    margin: 10px 0 0;
+    padding: 10px 0 0;
     font-family: pokemon-font;
     color: yellow;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: blue;
     letter-spacing: 5px;
     box-sizing: border-box;
+}
+
+main {
+    position: relative;
+    z-index: 2;
 }
 
 @media (max-width:900px) {
@@ -39,7 +55,7 @@ header {
     }
 
     body #counter {
-        width: 40%;
+        width: 25%;
     }
 }
 
@@ -95,7 +111,7 @@ header {
 
 #counter {
     background-color: aliceblue;
-    width: 15%;
+    width: 10%;
     margin: 20px auto;
     font-weight: bold;
     color: black;

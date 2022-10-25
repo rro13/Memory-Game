@@ -73,40 +73,24 @@ function shuffleList(list) {
     return list;
 }
 
-var centiSeconds= 0;
-var seconds = 0;
-var minutes = 0;
+let minutes = 0;
+let seconds = 0;
+const timer = () => {
+    const elementSeconds = document.getElementById('seconds');
+    const elementMinutes = document.getElementById('minutes');
+    const separator = document.getElementById('separator')
 
-function cronometro () {
-    var CentiSeconds = document.getElementById('centi-seconds');
-    var Seconds = document.getElementById('seconds');
-    var Minutes = document.getElementById('minutes');
-
-    if (centiSeconds< 99) {
-        centiSeconds++;
-        if (centiSeconds< 10) { centiSeconds= "0"+centiSeconds}
-        CentiSeconds.innerHTML = ":"+centiSeconds;
+    if(+elementSeconds.textContent < 59) {
+        seconds = +elementSeconds.textContent + 1;
+        elementSeconds.textContent = String(seconds).padStart(2, '0')
+    }else {
+        minutes = minutes + 1;
+        seconds = '00';
+        elementSeconds.textContent = seconds
+        separator.textContent = ":";
+        elementMinutes.textContent = String(minutes).padStart(2,'0')
     }
-    if (centiSeconds== 99) {
-        centiSeconds= -1;
-    }
-    if (centiSeconds== 0) {
-        seconds ++;
-        if (seconds < 10) { seconds = "0"+seconds }
-        Seconds.innerHTML = ":"+seconds;
-    }
-    if (seconds == 59) {
-        seconds = -1;
-    }
-    if ( (centiSeconds== 0)&&(seconds == 0) ) {
-        minutes++;
-        if (minutes < 10) { minutes = "0"+minutes }
-        Minutes.innerHTML = minutes;
-    }
-    if (minutes == 59) {
-        minutes = -1;
-    }
-} 
+}
 
 const loadGame = () => {
     const cards = document.getElementById('cards');
@@ -117,7 +101,7 @@ const loadGame = () => {
         cards.appendChild(card)
     });
 
-    // setInterval(cronometro,10);
+    // setInterval(timer,1000)
 }
 
 loadGame() 
