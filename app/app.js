@@ -93,7 +93,7 @@ const timer = () => {
     }
 }
 
-// let startTimer =  setInterval(timer,1000);
+let startTimer =  setInterval(timer,1000);
 
 const resetGame = () => {
     elementSeconds = document.getElementById('seconds');
@@ -116,8 +116,10 @@ const resetGame = () => {
 }
 
 const loadGame = () => {
-    const cards = document.getElementById('cards');
+    const playerName = document.getElementById('player-name');
+    playerName.textContent = `Player: ${localStorage.getItem('name')}`;
 
+    const cards = document.getElementById('cards');
     const cardList = cards.childNodes.length
     if(cardList != 1) {
         cards.innerHTML = '';
@@ -130,5 +132,5 @@ const loadGame = () => {
     });
 }
 
-loadGame() 
+loadGame()
 
