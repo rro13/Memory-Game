@@ -121,7 +121,7 @@ body {
 #game-infos {
     display: flex;
     align-items: center;
-    margin: 2rem 3rem;
+    margin: 1rem 3rem;
     justify-content: space-between;
 }
 
