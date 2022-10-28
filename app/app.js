@@ -2,14 +2,28 @@ const pokemonList = ['003','006','012','028','045','051','057','065','067','079'
 
 const createElement = (tag, className) => {
     const element = document.createElement(tag);
-    element.className = className
-    return element
+    element.className = className;
+    return element;
+}
+
+const winMsg = () => {
+    const winBox = document.getElementsByClassName('win-box')[0];
+    clearInterval(startTimer);
+    winBox.classList.add('active');
+    const winnerTime = document.getElementById('winner-time');
+    const winMinutes = document.getElementById('minutes').textContent;
+    const winSeconds = document.getElementById('seconds').textContent;
+    winnerTime.textContent = ` ${localStorage.getItem('name')}, your time was: ${winMinutes}${separator.textContent}${winSeconds}`;
+}
+
+const btnHome = () => {
+    window.location.href = "/index.html";
 }
 
 const endGame = () => {
     const correctPairs = document.getElementsByClassName('correct-pair');
-    if(correctPairs.length == 20) {
-        alert("Você ganhou!!")
+    if(correctPairs.length == 30) {
+        winMsg();
     }
 }
 
@@ -50,7 +64,7 @@ const flipCard = (event) => {
 const createCard = (pokemon) => {
     const card = createElement('div','card');
     const front = createElement('div','face front');
-    front.style.backgroundImage = `url('/imagens/${pokemon}.png')`;
+    front.style.backgroundImage = `url('https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon}.png')`;
     const back = createElement('div','face back');
 
     card.appendChild(front);
@@ -96,6 +110,11 @@ const timer = () => {
 let startTimer =  setInterval(timer,1000);
 
 const resetGame = () => {
+    const winBox = document.getElementsByClassName('win-box')[0];
+    if(winBox.classList.contains('active')) {
+        winBox.classList.remove('active')
+    }
+
     elementSeconds = document.getElementById('seconds');
     elementMinutes = document.getElementById('minutes');
     separator = document.getElementById('separator');

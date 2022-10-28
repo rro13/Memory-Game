@@ -74,6 +74,45 @@ body {
 
 /* Game */
 
+.win-box {
+    background-color: rgb(109, 188, 241);
+    background-image: url('/imagens/pikachu.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    z-index: 1;
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.win-box.active {
+    display: flex;
+}
+
+.win-box h2 {
+    color: red;
+}
+
+.win-box h3 {
+    margin: 4rem;
+    font-size: 1.5rem;
+}
+
+.btn {
+    font-size: 1.3rem;
+    margin: 0 30px 10px;
+    width: 8rem;
+    border-radius: 10px;
+}
+
 .game-name {
     display: flex;
     justify-content: center;
