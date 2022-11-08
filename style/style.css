@@ -76,21 +76,19 @@ body {
 
 .win-box {
     background-color: rgb(109, 188, 241);
-    background-image: url('/imagens/pikachu.png');
+    background-image: url('../imagens/pikachu.png');
     background-repeat: no-repeat;
     background-position: left;
     z-index: 1;
-    width: 50%;
-    height: 40%;
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
     display: none;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 2rem;
     border-radius: 10px;
+    text-align: center;
 }
 
 .win-box.active {
@@ -99,17 +97,17 @@ body {
 
 .win-box h2 {
     color: red;
+    padding: 1rem;
 }
 
-.win-box h3 {
-    margin: 4rem;
-    font-size: 1.5rem;
+#winner-time {
+    color: black;
 }
 
 .btn {
     font-size: 1.3rem;
-    margin: 0 30px 10px;
-    width: 8rem;
+    margin: 0 1rem;
+    padding: 0 1.2rem;
     border-radius: 10px;
 }
 
@@ -142,7 +140,15 @@ body {
     }
     main #game-infos {
         flex-direction: column;
-    }    
+    }
+    main #btn-winBox{
+        display: flex;
+        flex-direction: column;
+    }
+    main .btn {
+        margin: 0.5rem;
+    }
+
 }
 
 #game-infos {
@@ -165,7 +171,6 @@ body {
 
 #counter {
     padding: 0.5rem;
-    /* background-color: white; */
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -223,7 +228,7 @@ body {
 }
 
 .back {
-    background-image: url(/imagens/pokebola.png);
+    background-image: url(../imagens/pokebola.png);
     background-color: rgb(226, 224, 224);
     background-size: 95%;
     backface-visibility: hidden;
