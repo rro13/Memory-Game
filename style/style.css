@@ -67,7 +67,7 @@
 }
 
 body {
-    background-image: url(../imagens/grass.jpg);
+    background-image: url('../imagens/grass.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -228,7 +228,7 @@ body {
 }
 
 .back {
-    background-image: url(/imagens/pokebola.png);
+    background-image: url('../imagens/pokebola.png');
     background-color: rgb(226, 224, 224);
     background-size: 95%;
     backface-visibility: hidden;
