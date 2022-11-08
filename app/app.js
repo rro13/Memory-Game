@@ -1,5 +1,5 @@
-// const pokemonList = ['003']
-const pokemonList = ['003','006','012','028','045','051','057','065','067','079','094','107','121','122','123']
+const pokemonList = ['003']
+// const pokemonList = ['003','006','012','028','045','051','057','065','067','079','094','107','121','122','123']
 
 
 const createElement = (tag, className) => {
@@ -24,7 +24,7 @@ const btnHome = () => {
 
 const endGame = () => {
     const correctPairs = document.getElementsByClassName('correct-pair');
-    if(correctPairs.length == 30) {
+    if(correctPairs.length == 2) {
         winMsg();
     }
 }
