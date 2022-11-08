@@ -228,7 +228,7 @@ body {
 }
 
 .back {
-    background-image: url(pokebola.png);
+    background-image: url(/imagens/pokebola.png);
     background-color: rgb(226, 224, 224);
     background-size: 95%;
     backface-visibility: hidden;
