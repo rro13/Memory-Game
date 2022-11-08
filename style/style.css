@@ -67,7 +67,7 @@
 }
 
 body {
-    background-image: url(/imagens/grass.jpg);
+    background-image: url(../imagens/grass.jpg);
     background-size: cover;
     background-position: center;
 }

@@ -5,7 +5,7 @@ const checkName = () => {
         msgBox.textContent = "the name must be at least 3 characters long"
     } else {
         localStorage.setItem('name',name);
-        window.location.href = "/game.html";
+        window.location.href = "../game.html";
     }
 }
 
