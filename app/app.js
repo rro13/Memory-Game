@@ -23,7 +23,7 @@ const btnHome = () => {
 
 const endGame = () => {
     const correctPairs = document.getElementsByClassName('correct-pair');
-    if(correctPairs.length == 2) {
+    if(correctPairs.length == 30) {
         winMsg();
     }
 }
