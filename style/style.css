@@ -228,9 +228,9 @@ body {
 }
 
 .back {
-    background-image: url('../imagens/pikachu.png');
-    /* background-image: url('../imagens/pokebola.png'); */
-    background-color: rgb(226, 224, 224);
+    background-color: rgb(197, 194, 194);
+    /* background-image: url('../imagens/pikachu.png'); */
+    background-image: url('../imagens/pokebola.png');
     background-size: 95%;
     backface-visibility: hidden;
 }
