@@ -17,7 +17,7 @@ const winMsg = () => {
 }
 
 const btnHome = () => {
-    window.location.href = "/index.html";
+    window.location.href = "../index.html";
 }
 
 const endGame = () => {
@@ -136,7 +136,7 @@ const resetGame = () => {
 
 const loadGame = () => {
     const playerName = document.getElementById('player-name');
-    playerName.textContent = `Player: ${localStorage.getItem('name')}`;
+    playerName.textContent = `player: ${localStorage.getItem('name')}`;
 
     const cards = document.getElementById('cards');
     const cardList = cards.childNodes.length

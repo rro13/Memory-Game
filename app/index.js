@@ -8,3 +8,9 @@ const checkName = () => {
         window.location.href = "/game.html";
     }
 }
+
+document.addEventListener('keydown', (event) => {
+    if (event.keyCode === 13) {
+        checkName()
+    }
+})

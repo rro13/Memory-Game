@@ -126,80 +126,66 @@ body {
     box-sizing: border-box;
 }
 
-.game-name a{
-    text-decoration: none;
-    color: yellow;
-    -webkit-text-stroke-color: blue;
-}
-
 @media (max-width:900px) {
     header {
-        font-size: 1.4rem;
         text-align: center;
     }
 
     main #cards {
         grid-template-columns: repeat(5, 1fr);
     }
+}
 
-    body #counter {
-        width: 15%;
+@media (max-width:700px) {
+    header .game-name {
+        font-size: 1rem;
     }
-
-    main #game-infos{
-        display: flex;
+    main #game-infos {
         flex-direction: column;
-        justify-content: space-between;
-    }
-    main #game-infos div{
-        margin:1rem;
-    }
-
+    }    
 }
 
 #game-infos {
     display: flex;
     align-items: center;
-    margin: 1rem 3rem;
+    margin: 1rem 2rem;
     justify-content: space-between;
+    background-color: #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
 }
 
 #player-name {
-    background-color: white;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
     padding: 0 10px;
     font-weight: bold;
-    min-width: 10rem;
-    height: 2rem;
-    border-radius: 5px;
 }
 
 #counter {
-    background-color: white;
-    width: 10%;
+    padding: 0.5rem;
+    /* background-color: white; */
     display: flex;
     align-items: center;
     font-weight: bold;
     color: black;
     justify-content: center;
     border-radius: 5px;
-    height: 2.5rem
 }
 
 .clock{
     font-size: 1.5rem;
-    color: black
+    color: black;
 }
 
 
 #reset-button {
-    background-color: white;
+    background-color: red;
+    font-weight: bold;
     text-transform: uppercase;
-    font-size: 1.5rem;
-    width: 8em;
-    height: 2.5rem;
+    font-size: 1.3rem;
+    padding: 0.5rem;
     border-radius: 50px;
 }
 
@@ -215,7 +201,7 @@ body {
     aspect-ratio: 3/4;
     width: 100%;
     position: relative;
-    background-color: #ccc;
+    background-color: aliceblue;
     transition: transform 0.8s;
 	transform-style: preserve-3d;
     border-radius: 5px;
